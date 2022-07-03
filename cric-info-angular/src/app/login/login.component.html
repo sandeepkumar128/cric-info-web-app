@@ -1,0 +1,46 @@
+<app-header2></app-header2>
+<div class="jumbotron text-center">
+    <h1 class="display-5">LOGIN</h1>
+</div>
+
+<div class="container">
+    <div class="row custom-wrapper">
+        <div class="col-md-12">
+
+            <form [formGroup]='profileLogin' (ngSubmit)="checkLogin()">
+
+            <div>
+                <label for="email">Email</label>
+                <fieldset class="form-group">
+                    <input class="form-control form-control-lg" type="email" placeholder="Enter your email"
+                      [formControl]="email" required />
+                    <small *ngIf="email.errors?.required">Email is mandatory</small>
+                    <small *ngIf="email.errors?.pattern">Please provide a valid email address</small>
+                </fieldset>
+            </div>
+
+                <fieldset class="form-group">
+                    <label for="password"></label>
+                    <input class="form-control form-control-lg" type="password" placeholder="Password"
+                    [formControl]="password" required/>
+                    <small *ngIf="password.invalid  && (password.dirty || password.touched)">Password is mandatory</small>
+                    <small *ngIf="password.errors?.required">
+                        Password must have minimum 4 characters
+                    </small>
+                </fieldset>
+                
+                <button type="submit" (click)="checkLogin()"  [disabled]="!profileLogin.valid">Login</button>
+                
+                <div>
+                    <button type="register" class="logoutbtn" (click)="gotoregister()">New user Register here</button>
+                </div>
+            
+            </form>
+        </div>
+    </div>
+</div>
+<br/>
+<br/><br/><br/>
+<!-- 
+<img [src] = "k" height="300px" width="300px" alt=".." *ngIf="k"> -->
+<app-footer></app-footer>

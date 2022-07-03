@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="main-container">
+<form [formGroup] = 'profileLogin' (ngSubmit) = "loginSubmit()">
+    
+    <div>
+        <label for="name">Name</label>
+        <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Enter your name"
+              [formControl]="name" required />
+            <small *ngIf="name.errors?.required">Name is mandatory</small>
+        </fieldset>
+    </div>
+   
+    <div>
+        <label for="email">Email</label>
+        <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="email" placeholder="Enter your email"
+              [formControl]="email" required />
+            <small *ngIf="email.errors?.required">Email is mandatory</small>
+            <small *ngIf="email.errors?.pattern">Please provide a valid email address</small>
+        </fieldset>
+    </div>
+
+        <fieldset class="form-group">
+            <label for="password"></label>
+            <input class="form-control form-control-lg" type="password" placeholder="Password"
+            [formControl]="password" required/>
+            <small *ngIf="password.invalid  && (password.dirty || password.touched)">Password is mandatory</small>
+            <small *ngIf="password.errors?.required">
+                Password must have minimum 4 characters
+            </small>
+        </fieldset>
+    
+    <!-- Upload Image: <input type="text" [(ngModel)]="user.profilePic" name="picture"/><button (click) = "imgUpload()">Upload</button><br/>-->
+    Upload Image: <input type="file" (change)="onFileChanged($event)"/>
+    <!-- <input type="button" (click)="onUpload()" value="Upload">
+    <br> -->
+    <br>
+    <img [src]="imgURL" *ngIf="imgURL" height="250" alt="">
+    <button type="submit" (click)="addUser()"  [disabled]="!profileLogin.valid">Register</button>
+           
+</form>
+</div>
+<app-footer></app-footer>

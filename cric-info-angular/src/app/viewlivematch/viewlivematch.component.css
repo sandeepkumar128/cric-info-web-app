@@ -1,0 +1,256 @@
+.img_s{
+    height: 30px;
+    width: 30px;
+  }
+  .btn
+  {
+    font-size:20px !important;
+  }
+  .navheader
+  {
+    background-color: black !important;
+    /* position: fixed; */
+  }
+  .nav-link
+  {
+    color: white !important;
+    font-size: 20px !important;
+    padding-right: 20px !important;
+  }
+  .dropdown-toggle{
+    color: yellowgreen;
+    background-color: black;
+  }
+  .navheadercollapse
+  {
+    margin-left: 160px;
+  }
+  .navheader a:hover
+  {
+    background-color: black !important;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #F1F1F1;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0B7DDA;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  form.example{
+    margin-right: 200px;
+  }
+  .section1{
+    width: 100%;
+    
+  } 
+  .content{
+    /* margin-left: 3em; */
+    text-align: center;
+    font-family: 'Kumar One', cursive;
+    font-size:2em;
+    color:green;
+  }
+  .tabl{
+    border-color:white
+  }
+  .current-card{
+    width: 120vw;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2em;
+    border: 1px solid green;
+    justify-content: center !important;
+  }
+  .viewdetails{
+    
+      background-color: #EC6C45;
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      text-align: center;
+      font-size: 18px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      /* display: inline-block; */
+      text-decoration: none;
+      cursor: pointer;
+  }
+    
+    .viewdetails:hover {opacity: 1}
+  
+  mat-card-title{
+    text-align: justify;
+  }
+  
+  .mattool1
+  {
+  /* background-image: url("../../assets/livescoresback1.jpeg"); */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  
+  height: 70px;
+  width:100%;
+  }  
+  .search
+  {
+    margin-right: 200px;
+    color: white;
+  }
+  
+  .mat-tab-label{
+  color: white;
+  }
+  table{ 
+  border-collapse:separate; 
+  border-spacing: 0 7px; 
+  margin-left: 18px;
+  } 
+  th{ 
+  background-color: #4287F5; 
+  color: white; 
+  } 
+  th,td{ 
+  width: 150px; 
+  text-align: center; 
+  border: 1px solid black; 
+  padding: 5px;
+  }
+  h3{ 
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 35px;
+  color:black; 
+  margin-top: 20px;
+  /* background-color: rgb(60, 29, 146); */
+  }
+  h4{
+  text-align: center;
+  margin-top: 10px;
+  }
+  
+  
+  
+  /* Style the navigation menu */
+  .navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  }
+  .s3d1
+  {
+    /* height: 200px;
+    width: 300px; */
+    background-color: rgb(218, 235, 122);
+    margin-left: 30px;
+    border: 1px solid black;
+  }
+  /* Navigation links */
+  .navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 10%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+  }
+  
+  /* Add a background color on mouse-over */
+  .navbar a:hover {
+  background-color: rgb(56, 52, 52);
+  }
+  
+  /* Style the current/active link */
+  .navbar a.active {
+  background-color: #4CAF50;
+  }
+  
+  /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+  @media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+  }
+  /* .tabledata
+  {
+    border: 1px solid black;
+  } */
+  .footerimg{
+    height: 70px;
+    width: 70px;
+  }
+  .list-unstyled{
+    color: white;
+   
+  } 
+  .titlefoot{
+    color: green;
+  }
+  
+  footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(26, 56, 17);
+    color: white;
+    text-align: center;
+  }
+  
+  a{
+      color: white;
+  }
+  .footer-copyright{
+    background-color:rgba(12, 3, 3, 0.836);
+  }
+  .current-sec{
+    display: flex;
+    flex-direction: row;
+  }
+  .testdiv{
+    margin: 4%;
+    border:3px solid whitesmoke ;
+}
+.paginate{
+    margin-top: 3% !important;
+    margin-left: 40% !important;
+    padding-left: 45%; 
+    text-align: center;
+}

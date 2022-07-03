@@ -1,0 +1,77 @@
+version: '3'
+services:
+#   container for mysql
+  databasemysql:
+    image: mysql:8.0.17
+    restart: always
+    ports:
+      - "3306:3306"
+    container_name: mysql-doc
+    network_mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: Root@123
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Root@123
+      MYSQL_DATABASE: cMatchAppDB
+
+#    container for momgo
+  databasemongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    container_name: mongo-con
+    network_mode: host
+    environment:
+      MONGO_DATABASE: SpringBootDemo
+
+#   container for UserService
+  userservice:
+      build:
+        dockerfile: Dockerfile
+        context:  ./User
+      container_name: user-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8085:8085"
+      depends_on:
+        - databasemysql
+        
+#   container for UserRecommendationsService
+  userrecommendationsservice:
+      build: 
+        dockerfile: Dockerfile
+        context:  ./UserRecommendations
+      container_name: userrecommendations-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8086:8086"
+      depends_on:
+        - databasemongo
+
+#   container for UserRemindersService
+  userremindersservice:
+      build: 
+        dockerfile: Dockerfile
+        context:  ./UserReminders
+      container_name: userreminders-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8087:8087"
+      depends_on:
+        - databasemongo
+        
+# container for front end 
+  angular-frontend:
+    build:
+       dockerfile: Dockerfile
+       context:  ./cMatchAppNG
+    container_name: angular-docker
+    network_mode: host
+    restart: always
+    ports:
+       - "8006:8006"
+    

@@ -1,0 +1,48 @@
+.content{
+    margin-top: 15%;
+    margin-left: 40%;
+    height: 30vh;
+    color: seagreen;
+    border-radius: 25px;
+    font-size: 2em;
+}
+
+.current-sec{
+    display: flex;
+    flex-direction: row;
+}
+
+.paginate{
+    margin-top: 3% !important;
+    margin-left: 40% !important;
+    padding-left: 45%; 
+    text-align: center;
+}
+
+.news-sec{
+    display: flex;
+    flex-direction: row;
+}
+.testcard{
+    width: 120vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 2px solid green;
+    justify-content: center;
+    box-shadow: 0 6px 10px 0 rgba(3, 114, 3, 0.2), 0 8px 22px 0 rgba(3, 114, 3, 0.2);
+}
+
+.Test{
+    display: flex;
+    flex-direction: row;
+}
+
+.testdiv{
+    margin: 4%;
+    border:3px solid seagreen ;
+    border-radius: 25px;
+
+}
+
+

@@ -1,0 +1,32 @@
+<app-header></app-header>
+<app-search></app-search>
+
+
+<div class="testdiv">
+  <br />
+  <mat-toolbar><b class="content">LIVE MATCHES</b></mat-toolbar>
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="  Start searching for a match country name">
+  <section class="current-sec">
+    <mat-card class="current-card"
+      *ngFor="let item of currentMatches | filter:searchText | paginate: { itemsPerPage: 4, currentPage: o } ;let i=index ">
+      <table class="tabl">
+        <tr>
+          <mat-card-title>
+            <h4>{{item.team_1}} vs {{item.team_2}}</h4>
+          </mat-card-title>
+        </tr><br />
+        <!-- <tr>
+                  <b>Match ID:</b>{{item.unique_id}}
+              </tr>  -->
+        <tr> <b>Date:</b>{{item.date}}</tr>
+        <tr>
+          <b>Type:</b>{{item.type}}</tr>
+        <tr><button (click)="viewDetails(item.unique_id)" class="viewdetails" type=”button”>view details</button></tr>
+      </table>
+    </mat-card>
+  </section>
+  <pagination-controls class="paginate" (pageChange)="o = $event"></pagination-controls>
+  <br />
+  <br />
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,9 @@
+.user-recommendations
+{
+    width:30vw;
+    height: 40vh;
+    margin:30px;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+}

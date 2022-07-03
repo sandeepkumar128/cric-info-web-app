@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="olddiv">
+    <br />
+    <mat-toolbar><b class="content">RECOMMENDATIONS</b></mat-toolbar>
+    <section class="old">
+        <mat-card class="oldcard" *ngFor="let item of recommendations | paginate: { itemsPerPage: 4, currentPage: ol }">
+            <mat-card-title>{{item.team1}} vs {{item.team2}}</mat-card-title>
+            <!-- <b>Team 1:</b>{{item.team1}}<br />
+            <b>Team 2:</b>{{item.team2}}<br /> -->
+           <b>Date:</b>{{item.date}}<br />
+           <b>Type:</b>{{item.type}}<br />
+           <b>Recommended by {{item.count}} user(s) </b><br />
+        </mat-card>
+    </section>
+    <pagination-controls class="paginate" (pageChange)="ol = $event"></pagination-controls>
+</div>
+<app-footer></app-footer>

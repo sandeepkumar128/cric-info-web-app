@@ -1,0 +1,21 @@
+<app-header></app-header>
+<br />
+<app-search></app-search>
+
+<div class="news-div" >
+    <br />
+        <mat-toolbar><b class="content">LATEST NEWS</b></mat-toolbar>
+    <section class="news-sec">
+        <mat-card class="cricket-news-card" *ngFor="let news of newsList | paginate: { id:'n', itemsPerPage: 4, currentPage: o } ">
+            <mat-card-title>{{news.title}}</mat-card-title><br />
+            <mat-card-content class="news-image"><img src="{{news.urlToImage}}"></mat-card-content><br />
+            <mat-card-content>{{news.description}}</mat-card-content>
+            <!-- <mat-card-content>{{news.publishedAt}}</mat-card-content> -->
+        </mat-card>
+    </section>
+    <pagination-controls id="n" previousLabel=""
+    nextLabel="" autoHide="true" class="paginate" (pageChange)="o = $event"></pagination-controls>
+</div>
+
+<app-current-matches></app-current-matches>
+<app-footer> </app-footer>

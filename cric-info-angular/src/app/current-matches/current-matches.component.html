@@ -1,0 +1,21 @@
+<div class="testdiv">
+  <br />
+  <mat-toolbar><b class="content">TODAY'S MATCHES</b></mat-toolbar>
+
+  <section class="Test">    
+    <mat-card *ngFor="let item of currentMatches | paginate: { id:'c',itemsPerPage: 4, currentPage: o }" class="testcard">
+      <mat-card-title>{{item.team_1}} vs {{item.team_2}}</mat-card-title>
+      <!-- <b>Team 1:</b> {{item.team_1}}<br />
+      <b>Team 2:</b> {{item.team_2}}<br /> <b>Date:</b> -->
+       {{item.date}}<br />
+      <!-- <b>Match Status:</b> {{item.matchStarted}}<br/> -->
+       {{item.type}}<br/>
+      <!-- <b>Winner Team :</b> {{item.winner_team}} <br/> -->
+      <br/>
+      <button mat-raised-button color="warn" (click)="getScore(item.unique_id)">Score</button>
+    </mat-card> 
+  </section>
+  <pagination-controls id="c"  previousLabel="" nextLabel="" autoHide="true" class="paginate" (pageChange)="o = $event"></pagination-controls>
+
+</div>
+

@@ -1,0 +1,8 @@
+<app-header></app-header>
+<app-search></app-search>
+<div class="my-recommendations">
+<app-search-results-child [result]="result" *ngFor="let result of resultArray1| paginate: { itemsPerPage: 12, currentPage: o}"></app-search-results-child>
+<pagination-controls class="paginate" (pageChange)="o = $event" autoHide="true"></pagination-controls>
+</div>
+
+<app-footer></app-footer>

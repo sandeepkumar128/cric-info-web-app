@@ -1,0 +1,80 @@
+.product-container{
+    margin:auto;
+    width:60vh;
+    margin-top:30px;
+    background-color: #a8e063;
+    background-image: linear-gradient(315deg, #00b712 0%, #56ab2f 74%);
+}
+
+.enter-product{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .product-card-view
+{
+    width:18vw;
+    margin:10px;
+    border: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+} */
+.submit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .delete-button{
+    display: inline;
+    justify-content: flex-end;
+}
+
+.main-container{
+    display: flex;
+    margin:auto;
+    width:70vw;
+    margin-top:30px;
+} */
+
+.news-sec{
+    display: flex;
+    flex-direction: row;
+}
+
+.cricket-news-card{
+    width: 22vw;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2em;
+    border: 2px solid seagreen;
+    justify-content:space-around ;
+    box-shadow: 0 6px 10px 0 rgba(3, 114, 3, 0.2), 0 8px 22px 0 rgba(3, 114, 3, 0.2);
+
+}
+
+.news-image img{
+    width : 18vw;
+    height: 25vh;
+}
+
+.paginate{
+    margin-top: 3% !important;
+    margin-left: 40% !important;
+    padding-left: 45%; 
+    text-align: center;
+}
+
+.content{
+    margin-top: 15%;
+    margin-left: 40%;
+    height: 30vh;
+    color: seagreen;
+    border-radius: 25px;
+    font-size: 2em;
+}
+
+.news-div{
+    margin: 4%;
+    border:3px solid seagreen ;
+    border-radius: 25px;
+}

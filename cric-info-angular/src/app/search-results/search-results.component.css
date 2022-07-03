@@ -1,0 +1,16 @@
+.resCard
+{
+  display: inline-flex;
+  flex-flow: column wrap;
+    width:35vw;
+    height: 45vh;
+    margin:30px;
+    border: 2px solid green;
+   
+}
+
+.images
+{
+  height: 20vh;
+  width:25vw;
+}

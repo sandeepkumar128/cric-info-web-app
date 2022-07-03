@@ -1,0 +1,61 @@
+<app-header></app-header>
+  <div class="container">
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-8">
+        <div class="card">
+          <div>
+          </div>
+          <div class="card-content">
+            <!-- <h4 class="card-title">EDIT PROFILE</h4> -->
+            <form [formGroup] = 'profileLogin' (ngSubmit) = "loginSubmit()">
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field color="primary">
+                    <input matInput type="text" placeholder="Name" [formControl]="name">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-card>
+                  <mat-label>Change profile picture</mat-label>
+                  <input type="file" (change)="onFileChanged($event)"/>
+                  <img [src]="imgURL" *ngIf="imgURL" height="250" alt="">
+                </mat-card>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field color="primary">
+                    <input matInput type="text" placeholder="{{username}}" [formControl]="email" readonly>
+                  </mat-form-field>
+                </div>
+              <div class="col-md-6">
+                
+            </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <mat-form-field color="primary">
+                    <input matInput type="password" placeholder="Password" [formControl]="password">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row action-btn">
+                <button mat-raised-button color="warn" (click) = "editUser()" type="submit" class="primary">UPDATE PROFILE</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <div class="col-md-4">
+        <div class="card right-profile">
+          <div class="profile">
+            <img [src] = "k" height="100px" width="300px" alt=".." *ngIf="k">
+          </div>
+          <p>{{ username }}</p>
+          <p>Your Bio here...</p>
+          <button mat-raised-button class="btn btn-rose btn-round">CHANGE</button>  
+        </div>
+      </div>
+    </div> -->
+  </div>

@@ -1,0 +1,85 @@
+.Twenty{
+    display: flex;
+    flex-direction: row;
+}
+.twentydiv{
+    margin: 4%;
+    border:3px solid whitesmoke ;
+}
+ .twentycard{
+    width: 80vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 1px solid green;
+}
+
+.testcard{
+    width: 80vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 1px solid green;
+}
+
+.Test{
+    display: flex;
+    flex-direction: row;
+}
+
+.testdiv{
+    margin: 4%;
+    border:3px solid whitesmoke ;
+
+}
+
+.odicard{
+    width: 80vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 1px solid green;
+}
+
+.ODI{
+    display: flex;
+    flex-direction: row;
+}
+
+.OdiDivision{
+    border:3px solid whitesmoke ;
+    margin: 4% !important;
+}
+
+
+.Firstclasscard{
+    width: 80vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 1px solid green;
+}
+
+.Firstclass{
+    display: flex;
+    flex-direction: row;
+}
+
+.Firstclassdiv{
+    border:3px solid whitesmoke ;
+    margin: 4% !important;
+}
+
+ .content{
+    margin-top: 15%;
+    margin-left: 45%;
+    height: 30vh;
+    color: green;
+
+}
+
+ .paginate{
+    margin-top: 3% !important;
+    margin-left: 40% !important;
+    padding-left: 45%;
+}

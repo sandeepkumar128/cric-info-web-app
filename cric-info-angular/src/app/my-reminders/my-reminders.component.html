@@ -1,0 +1,79 @@
+<app-header></app-header>
+<mat-tab-group>
+    <mat-tab label="UPCOMING ODI REMINDERS"> 
+    <div class="testdiv">
+        <mat-toolbar><b class="content">UPCOMING ODI REMINDERS</b></mat-toolbar>
+        <section class="Test">
+                <mat-card class="testcard" *ngFor="let item of odiReminders | paginate: {id:'o', itemsPerPage: 4, currentPage: a } ">
+                        <mat-card-title>{{item.team1}} vs {{item.team2}}</mat-card-title>
+                        <!-- <b>Team 1:</b>{{item.team1}}<br />
+                        <b>Team 2:</b>{{item.team2}}<br /> -->
+                        <b>Date:</b>{{item.dateTimeGMT}}<br />
+                        <div *ngIf="item.winner_team"><b>Winners:{{item.winner_team}}</b><button mat-raised-button color="warn" (click)="getScore(item.matchid)">what's the Score</button></div><BR />
+                        <mat-card-content>
+                            <button mat-raised-button (click)="odiDelReminder(item.matchid)" color="warn">Delete Remind</button>
+                        </mat-card-content>
+                    </mat-card>
+        </section>
+        <pagination-controls id="o"  previousLabel=""
+        nextLabel="" class="paginate" (pageChange)="a = $event"></pagination-controls>
+    </div>
+    </mat-tab>
+    <mat-tab label="UPCOMING TEST REMINDERS"> 
+        <div class="testdiv">
+            <mat-toolbar><b class="content">UPCOMING TEST REMINDERS</b></mat-toolbar>
+            <section class="Test">
+                    <mat-card class="testcard" *ngFor="let item of testReminders | paginate: { id:'t', itemsPerPage: 4, currentPage: b }">
+                            <mat-card-title>{{item.team1}} vs {{item.team2}}</mat-card-title>
+                            <b>Team 1:</b>{{item.team1}}<br />
+                            <b>Team 2:</b>{{item.team2}}<br />
+                            <b>Date:</b>{{item.dateTimeGMT}}<br />
+                            <div *ngIf="item.winner_team"><b>Winners:{{item.winner_team}}</b></div>
+                            <mat-card-content>
+                                <button mat-raised-button (click)="testDelReminder(item.matchid)" color="warn">Delete Remind</button>
+                            </mat-card-content>
+                        </mat-card>
+            </section>
+            <pagination-controls id="t" previousLabel=""
+            nextLabel="" autoHide="true" class="paginate" (pageChange)="b = $event"></pagination-controls>
+        </div>
+         </mat-tab>
+    <mat-tab label="UPCOMING TWENTY REMINDERS"> 
+        <div class="testdiv">
+            <mat-toolbar><b class="content">UPCOMING TWENTY20 REMINDERS</b></mat-toolbar>
+            <section class="Test">
+                    <mat-card class="testcard" *ngFor="let item of twentyReminders | paginate: { id:'tt', itemsPerPage: 4, currentPage: c }">
+                            <mat-card-title>{{item.team1}} vs {{item.team2}}</mat-card-title>
+                            <!-- <b>Team 1:</b>{{item.team1}}<br />
+                            <b>Team 2:</b>{{item.team2}}<br /> -->
+                            <b>Date:</b>{{item.dateTimeGMT}}<br />
+                            <div *ngIf="item.winner_team"><b>Winners:{{item.winner_team}}</b></div>
+                            <mat-card-content>
+                                <button mat-raised-button (click)="ttDelReminder(item.matchid)" color="warn">Delete Remind</button>
+                            </mat-card-content>
+                        </mat-card>
+            </section>
+            <pagination-controls id="tt"  previousLabel=""
+            nextLabel="" autoHide="true" class="paginate" (pageChange)="c = $event"></pagination-controls>
+        </div>
+         </mat-tab>
+    <mat-tab label="UPCOMING FIRST-CLASS REMINDERS"> 
+        <div class="testdiv">
+            <mat-toolbar><b class="content">UPCOMING FIRST-CLASS REMINDERS</b></mat-toolbar>
+            <section class="Test">
+                    <mat-card class="testcard" *ngFor="let item of fcReminders | paginate: { id:'f', itemsPerPage:4, currentPage: d }">
+                            <mat-card-title>{{item.team1}} vs {{item.team2}}</mat-card-title>
+                            <!-- <b>Team 1:</b>{{item.team1}}<br />
+                            <b>Team 2:</b>{{item.team2}}<br /> -->
+                            <b>Date:</b>{{item.dateTimeGMT}}<br />
+                            <div *ngIf="item.winner_team"><b>Winners:{{item.winner_team}}</b></div>
+                            <mat-card-content>
+                                <button mat-raised-button (click)="fcDelReminder(item.matchid)" color="warn">Delete Remind</button>
+                            </mat-card-content>
+                        </mat-card>
+            </section>
+            <pagination-controls id="f" previousLabel=""
+            nextLabel="" autoHide="true" class="paginate" (pageChange)="d = $event"></pagination-controls>
+        </div>
+         </mat-tab>
+        </mat-tab-group>

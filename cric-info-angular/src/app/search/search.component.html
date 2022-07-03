@@ -1,0 +1,86 @@
+<mat-expansion-panel class="product-container">
+  <mat-expansion-panel-header>
+    <mat-panel-title class="search-results">
+       Search for Matches
+      <i class="material-icons">
+        search
+        </i>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <form [formGroup]="searchForm" (ngSubmit)="search()">
+    <div class="enter-product">
+      <!--for match type-->
+      <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Select Match Type........" aria-label="Number" matInput
+          [formControl]="myControl" [matAutocomplete]="autoMatches" >
+        <mat-autocomplete #autoMatches="matAutocomplete">
+          <mat-option value="All">All matches</mat-option>
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <!--for team 1-->
+      <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Team 1" aria-label="Number" matInput [formControl]="team1name"
+          [matAutocomplete]="autoTeam1">
+        <mat-autocomplete #autoTeam1="matAutocomplete">
+          <mat-option value="All">All Teams</mat-option>
+          <mat-option *ngFor="let option1 of filteredOptionsTeam1 | async" [value]="option1">
+            {{option1}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <!--for team 2-->
+      <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Team 2" aria-label="Number" matInput [formControl]="team2name"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option value="All">All Teams</mat-option>
+          <mat-option *ngFor="let option2 of filteredOptionsTeam2 | async" [value]="option2">
+            {{option2}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <!-- <mat-form-field >
+            <mat-label >Match Type</mat-label>
+            <mat-select formControlName="matchType">
+               <mat-option value="All">All matches</mat-option> 
+               <mat-option  *ngFor ="let f of tempArray" value="{{f}}">{{f}}</mat-option> 
+            </mat-select>
+          </mat-form-field> -->
+      <!-- <mat-form-field>
+            <mat-label>Team 1</mat-label>
+            <mat-select formControlName="team1">
+               <mat-option value="All">All Teams</mat-option> 
+              <mat-option *ngFor="let t1 of tempTeam1" value="{{t1}}">{{t1}}</mat-option>
+            </mat-select>
+          </mat-form-field> -->
+      <!-- <mat-form-field>
+            <mat-label>Team 2</mat-label>
+            <mat-select formControlName="team2">
+               <mat-option value="All">All Teams</mat-option>
+               <mat-option *ngFor="let t2 of tempTeam2" value="{{t2}}">{{t2}}</mat-option>
+            </mat-select>
+          </mat-form-field> -->
+
+
+    </div>
+    <div class="submit">
+      <button mat-button color="primary">Done</button>
+    </div>
+  </form>
+
+</mat-expansion-panel>
+
+<!--to display list of restaurants-->
+<br />
+<div *ngIf="clicked">
+  <h6 class="search-results">Search Results: {{x}} matches found! </h6>
+</div>
+<br/>
+<!-- <div class="my-recommendations">
+  <app-my-recommendations [result]="result" *ngFor="let result of resultArray1"></app-my-recommendations>
+</div> -->
+
+<!-- <app-search-results></app-search-results> -->

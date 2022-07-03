@@ -1,0 +1,147 @@
+<app-header></app-header>
+<section *ngIf="startflag==false" class="section1_alt">
+    <!-- <div>
+        Match is not started yet !
+        </div> -->
+    </section>
+<section class="section1" *ngIf="startflag==true">
+    <div class="mattool1"><br /><br/>
+        <h3 class="content"> LIVE CRICKET SCORES</h3>
+    </div>
+    <br />
+<h3>{{team1}}</h3>
+<br />
+<h3>{{team2}}</h3>
+<br />
+<h4>Toss winner team: {{tosswin}}</h4>
+<br />
+<mat-accordion>
+    <mat-expansion-panel >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{team1namebat}}
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+<table align="center">
+    <thead>
+        <tr>
+            <th>Batsman</th>
+            <th></th>
+            <th>R</th>
+            <th>B</th>
+            <th>4s</th>
+            <th>6s</th>
+            <th>SR</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let r of team1playersbat">
+        <tr>
+            <td>{{r.batsman}}</td>
+            <td>{{r.info}}</td>
+            <td>{{r.R}}</td>
+            <td>{{r.B}}</td>
+            <td>{{r.fours}}</td>
+            <td>{{r.sixs}}</td>
+            <td>{{r.SR}}</td>
+        </tr>
+    </tbody>
+</table>
+<br /><br />
+<table align="center">
+    <thead>
+        <tr>
+            <th>Bowling</th>
+            <th>O</th>
+            <th>M</th>
+            <th>R</th>
+            <th>W</th>
+            <th>Econ</th>
+            <th>0s</th>
+            <th>4s</th>
+            <th>6s</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let r of team1playersball">
+        <tr>
+            <td>{{r.bowler}}</td>
+            <td>{{r.O}}</td>
+            <td>{{r.M}}</td>
+            <td>{{r.R}}</td>
+            <td>{{r.W}}</td>
+            <td>{{r.Econ}}</td>
+            <td>{{r.zeros}}</td>
+            <td>{{r.fours}}</td>
+            <td>{{r.sixs}}</td>
+        </tr>
+    </tbody>
+</table>
+</mat-expansion-panel>
+</mat-accordion>
+<br />
+<br />
+<br />
+<mat-accordion>
+    <mat-expansion-panel >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{team2namebat}}
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+<table align="center">
+    <thead>
+        <tr>
+            <th>Batsman</th>
+            <th></th>
+            <th>R</th>
+            <th>B</th>
+            <th>4s</th>
+            <th>6s</th>
+            <th>SR</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let r of team2playersbat">
+        <tr>
+            <td>{{r.batsman}}</td>
+            <td>{{r.info}}</td>
+            <td>{{r.R}}</td>
+            <td>{{r.B}}</td>
+            <td>{{r.fours}}</td>
+            <td>{{r.sixs}}</td>
+            <td>{{r.SR}}</td>
+        </tr>
+    </tbody>
+</table>
+<br /><br />
+<table align="center">
+    <thead>
+        <tr>
+            <th>Bowling</th>
+            <th>O</th>
+            <th>M</th>
+            <th>R</th>
+            <th>W</th>
+            <th>Econ</th>
+            <th>0s</th>
+            <th>4s</th>
+            <th>6s</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let r of team2playersball">
+        <tr>
+            <td>{{r.bowler}}</td>
+            <td>{{r.O}}</td>
+            <td>{{r.M}}</td>
+            <td>{{r.R}}</td>
+            <td>{{r.W}}</td>
+            <td>{{r.Econ}}</td>
+            <td>{{r.zeros}}</td>
+            <td>{{r.fours}}</td>
+            <td>{{r.sixs}}</td>
+        </tr>
+    </tbody>
+</table>
+</mat-expansion-panel>
+</mat-accordion>
+<br />
+<br />
+</section>

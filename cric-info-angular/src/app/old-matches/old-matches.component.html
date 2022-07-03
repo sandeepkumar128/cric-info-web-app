@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="olddiv">
+    <br />
+    <mat-toolbar><b class="content">OLD MATCHES</b></mat-toolbar>
+    <section class="old">
+        <mat-card class="oldcard" *ngFor="let item of oldlist | paginate: { itemsPerPage: 4, currentPage: o }">
+            <mat-card-title>{{item.team_1}} vs {{item.team_2}}</mat-card-title>
+            <b>Team 1:</b>{{item.team_1}}<br />
+            <b>Team 2:</b>{{item.team_2}}<br />
+            <!-- <b>Date:</b>{{item.pubDate}}<br /> -->
+            <b>Score:</b>{{item.score}}<br />
+        </mat-card>
+    </section>
+    <pagination-controls autoHide="true" class="paginate" (pageChange)="o = $event"></pagination-controls>
+</div>
+<app-footer> </app-footer>

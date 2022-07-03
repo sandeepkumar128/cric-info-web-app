@@ -1,0 +1,56 @@
+<mat-toolbar class="header-main">
+    <button mat-menu-item (click)="dashboard()"><span class="header-title">CricMatchInfo</span></button>
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark secondary-color lighten-1">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" (click)="upcoming()">Upcoming Matches
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="old()">Old Matches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="recommendations()">Recommendations</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" (click)="live()">Live Matches</a>
+          </li>
+  
+  
+        </ul>
+        <!-- <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <div class="collapse navbar-collapse" id="navbar-list-4">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                <a class="nav-links dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img [src] = "k" height="40px" width="40px" alt="image not found" *ngIf="k" width="40" height="40" class="rounded-circle">
+                </a>
+  
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <button class="dropdown-item" *ngIf="togglelog==false" (click)="editProfile()" [disabled]="togglelog">My Profile</button>
+                  <button class="dropdown-item" *ngIf="togglelog==false" (click)="myRecommendations()" [disabled]="togglelog">My Recommendations</button>
+                  <button class="dropdown-item" *ngIf="togglelog==false" (click)="myReminders()" [disabled]="togglelog">My Reminders</button>
+                  <button class="dropdown-item" *ngIf="togglelog==false" (click)="logout()" [disabled]="togglelog">Log Out</button>
+                </div>
+              </li>   
+            </ul>
+          </div>
+        </ul> -->
+      </div>
+    </nav>
+    <!-- <div>
+      {{username}}
+  </div> -->
+    <!--/.Navbar -->
+    <!-- <span class="heading"></span>
+    <button class="button" mat-raised-button *ngIf="toggle==false" (click)="login()" [disabled]="toggle" color="warn">Login</button> -->
+  </mat-toolbar>

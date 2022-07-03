@@ -1,0 +1,93 @@
+.Twenty{
+    
+    display: flex;
+    flex-direction: row;
+}
+.twentydiv{
+    margin: 4%;
+    border:3px solid seagreen ;
+    border-radius: 25px;
+}
+ .twentycard{
+    width: 100vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 2px solid seagreen;
+    justify-content:space-around ;
+    box-shadow: 0 6px 10px 0 rgba(3, 114, 3, 0.2), 0 8px 22px 0 rgba(3, 114, 3, 0.2);
+}
+.testcard{
+    width: 80vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 1px solid seagreen;
+    justify-content:space-around ;
+    box-shadow: 0 6px 10px 0 rgba(3, 114, 3, 0.2), 0 8px 22px 0 rgba(3, 114, 3, 0.2);
+    /* display: inline-flex;
+    flex-flow: column wrap; */
+}
+.Test{
+    display: flex;
+    flex-direction: row;
+}
+.testdiv{
+    margin: 4%;
+    border:3px solid seagreen ;
+    border-radius: 25px;
+}
+.odicard{
+    width: 80vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 2px solid seagreen;
+    justify-content:space-around ;
+    box-shadow: 0 6px 10px 0 rgba(3, 114, 3, 0.2), 0 8px 22px 0 rgba(3, 114, 3, 0.2);
+    /* display: inline-flex;
+  flex-flow: column wrap; */
+}
+.ODI{
+    display: flex;
+    flex-direction: row;
+}
+.OdiDivision{
+    border:3px solid seagreen;
+    margin: 4% !important;
+    border-radius: 25px;
+}
+.Firstclasscard{
+    width: 80vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2em;
+    border: 2px solid seagreen;
+    justify-content:space-around ;
+    box-shadow: 0 6px 10px 0 rgba(3, 114, 3, 0.2), 0 8px 22px 0 rgba(3, 114, 3, 0.2);
+}
+.Firstclass{
+    display: flex;
+    flex-direction: row;
+}
+.Firstclassdiv{
+    border:3px solid seagreen ;
+    margin: 4% !important;
+    border-radius: 25px;
+}
+ .content{
+    margin-top: 15%;
+    margin-left: 45%;
+    height: 30vh;
+    color: seagreen;
+    
+}
+ .paginate{
+    margin-top: 3% !important;
+    margin-left: 40% !important;
+    padding-left: 45%;
+    text-align: center;
+}
+.form-control{
+    width: 25vw !important;
+}

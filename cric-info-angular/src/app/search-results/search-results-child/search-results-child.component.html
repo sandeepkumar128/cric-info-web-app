@@ -1,0 +1,43 @@
+<mat-card class="resCard">
+    <!-- <mat-card-title>
+      Match ID:{{result.id}}
+      </mat-card-title> -->
+      <mat-card-title>
+        {{result.type}} Match
+        </mat-card-title>
+    <mat-card-content>
+      <b>Team 1:</b> {{result.team1}}
+    </mat-card-content>
+    <mat-card-content>
+      <b>Team 2:</b> {{result.team2}}
+      </mat-card-content>
+      <mat-card-content>
+        <b>Date:</b> {{result.date}} 
+      </mat-card-content>
+    <mat-card-content>
+      <b>Type:</b> {{result.type}}
+    </mat-card-content>
+    <!-- <div>
+    <div *ngIf="!(result.winner === undefined); else goDown">
+    <mat-card-content>
+      <b>Winner:</b> {{result.winner}}
+      </mat-card-content>
+      </div>
+      <ng-template #goDown>
+        <mat-card-content>
+          <b>Winner: Match has not started yet!</b>
+          </mat-card-content>
+      </ng-template>
+    </div> -->
+   
+    <mat-card-content>
+        <div *ngIf="isClicked">
+            <button mat-raised-button (click)="addToRecommendations(result)" color="warn">Recommend</button>
+          <!-- <button mat-raised-button (click)="addToRecommendations(result)" (click)="openSnackBar(message,action)" color="warn">Recommend</button> -->
+        </div>
+        <div *ngIf="!isClicked">
+          <button mat-raised-button (click)="addToRecommendations(result)" (click)="openSnackBar(messageDeleted,actionDeleted)" color="warn">Unrecommend</button>
+        </div>
+      </mat-card-content>
+    </mat-card> 
+

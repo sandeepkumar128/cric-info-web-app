@@ -1,0 +1,62 @@
+{
+  "recommendations": [
+    {
+      "_id": 1,
+      "unique_id": 1183534,
+      "date": "2020-01-02T00:00:00.000Z",
+      "team-1": "Australia",
+      "team-2": "New Zealand",
+      "type": "Test",
+      "toss_winner_team": "Australia"
+    },
+    {
+      "id": 2,
+      "unique_id": 11835345,
+      "date": "2020-01-02T00:00:00.000Z",
+      "team-1": "CHD",
+      "team-2": "Delhi",
+      "type": "T20",
+      "toss_winner_team": "Australia"
+    },
+    {
+      "id": 3,
+      "unique_id": 11835340,
+      "date": "2020-01-02T00:00:00.000Z",
+      "team-1": "lol",
+      "team-2": "lmfao",
+      "type": "T20",
+      "toss_winner_team": "Australia"
+    },
+    {
+      "unique_id": 11835349,
+      "date": "2020-01-02T00:00:00.000Z",
+      "team-1": "xoxox",
+      "team-2": "haha",
+      "type": "T20",
+      "toss_winner_team": "Australia",
+      "id": 4
+    },
+    {
+      "id": 1195591,
+      "team1": "Sydney Thunder",
+      "team2": "Melbourne Stars",
+      "type": "Twenty20",
+      "date": "2020-01-02T00:00:00.000Z",
+      "winner": "Melbourne Stars"
+    },
+    {
+      "id": 1183534,
+      "team1": "Australia",
+      "team2": "New Zealand",
+      "type": "Test",
+      "date": "2020-01-02T00:00:00.000Z"
+    },
+    {
+      "id": 1185305,
+      "team1": "South Africa",
+      "team2": "England",
+      "type": "Test",
+      "date": "2020-01-03T00:00:00.000Z"
+    }
+  ]
+}

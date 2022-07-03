@@ -1,0 +1,29 @@
+<app-header></app-header>
+    <!--display user recommendations data on page-->
+  <h1 style="color:blue;text-align:center;">Welcome {{username}}</h1>
+  <div *ngIf="dataRecommendation">
+        <div  *ngFor="let match of matches">
+           <mat-card class="user-recommendations" >
+             <!-- <mat-card-title>{{match.id}}</mat-card-title> -->
+             <mat-card-title>{{match.type}}</mat-card-title>
+             <mat-card-content><b>Teams:</b> {{match.team1}} VS {{match.team2}} </mat-card-content>
+             <mat-card-content><b>Match Date</b> {{match.date}}</mat-card-content>
+             <mat-card-content><b>Winner:</b> {{match.winner}}</mat-card-content>
+             
+             <!-- <mat-card-content class="update">
+               <button mat-button (click)="update(mynote)"  color= "primary">Update</button>
+           </mat-card-content>
+             <mat-card-content>
+               <button mat-button (click)="delete(mynote)" color= "primary">Delete</button>
+             </mat-card-content> -->
+             <mat-card-content>
+              <button mat-raised-button (click)="deleteUserRecommendation(match.matchid)" color= "primary">Delete</button>
+            </mat-card-content>
+           </mat-card>
+           </div>
+      </div>
+      <div *ngIf="!dataRecommendation">
+        <h1>You have not added any recommendations yet!</h1>
+      </div>
+
+      <app-footer></app-footer>
